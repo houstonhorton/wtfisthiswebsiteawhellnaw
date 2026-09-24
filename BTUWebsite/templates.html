@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet"> 
     <title>Design System Template</title>
     <style>
         /* CSS Reset and Base Styles */
         :root {
             /* Color Palette - 5 Core Colors */
-            --color-primary: #3498db;     /* Vibrant Blue - Main Brand Color */
-            --color-secondary: #2ecc71;   /* Emerald Green - Complementary Action Color */
-            --color-accent: #e74c3c;      /* Passionate Red - Highlight / Warning Color */
-            --color-neutral: #34495e;     /* Deep Slate Gray - Neutral Text and Background */
-            --color-highlight: #f1c40f;   /* Bright Yellow - Accent / Attention Color */
+            --color-primary: #231F20;     /* Vibrant Blue - Main Brand Color */
+            --color-secondary: #BB4430;   /* Emerald Green - Complementary Action Color */
+            --color-accent: #007991;      /* Passionate Red - Highlight / Warning Color */
+            --color-neutral: #557348;     /* Deep Slate Gray - Neutral Text and Background */
+            --color-highlight: #FF9F1C;   /* Bright Yellow - Accent / Attention Color */
             
             /* Derived Colors for Flexibility */
-            --color-background: color-mix(in srgb, var(--color-neutral) 10%, white);
+            --color-background: color-mix(in srgb, var(--color-neutral) 10%, #F7F7E7);
             --color-text-dark: var(--color-neutral);
-            --color-text-light: white;
+            --color-text-light: #ffffff;
 
             /* Typography */
-            --font-primary: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-secondary: 'Roboto Mono', monospace;
+            --font-primary: 'Bebas Neue', sans-serif;
+            --font-secondary: 'Geologica', sans-serif;
 
             /* Spacing System */
             --spacing-xs: 0.25rem;
@@ -40,10 +43,40 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        
+        }
+        .bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 600;
+        font-style: normal;
         }
 
+
+        .geologica-bodyfont {
+        font-family: "Geologica", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "CRSV" 0,
+            "SHRP" 0;
+        }
+
+        .commissioner-mainfont {
+        font-family: "Commissioner", sans-serif;
+        /*font-optical-sizing: auto;*/
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "FLAR" 0,
+            "VOLM" 0;
+        }
+
+
         body {
-            font-family: var(--font-primary);
+            font-family: var(--font-secondary);
             line-height: 1.6;
             background-color: var(--color-background);
             color: var(--color-text-dark);
@@ -57,6 +90,7 @@
 
         /* Typography Styles */
         h1 {
+            font-family: var(--font-primary);
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: var(--spacing-md);
@@ -64,6 +98,7 @@
         }
 
         h2 {
+            font-family: var(--font-primary);
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: var(--spacing-md);
@@ -71,6 +106,7 @@
         }
 
         h3 {
+            font-family: var(--font-primary);
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: var(--spacing-sm);
@@ -84,7 +120,7 @@
 
         .small-text {
             font-size: 0.75rem;
-            color: color-mix(in srgb, var(--color-text-dark) 70%, transparent);
+            color: color-mix(in srgb, var(--color-text-dark) 85%, transparent);
         }
 
         /* Color Palette Section */
@@ -196,10 +232,10 @@
 
         <section>
             <h2>Typography</h2>
-            <h1>Heading 1 - Space Grotesk</h1>
-            <h2>Heading 2 - Space Grotesk</h2>
-            <h3>Heading 3 - Space Grotesk</h3>
-            <p class="body-text">Body Text - Using Space Grotesk with a comfortable line height and readable size.</p>
+            <h1>Heading 1 - Bebas Neue</h1>
+            <h2>Heading 2 - Bebas Neue</h2>
+            <h3>Heading 3 - Bebas Neue</h3>
+            <p class="body-text">Body Text - Using Bebas Neue with a comfortable line height and readable size.</p>
             <p class="small-text">Small Text - Subtle and understated, perfect for annotations and footnotes.</p>
         </section>
 
@@ -217,9 +253,11 @@
 
         <section>
             <h2>Interactive Components</h2>
-            <a href="#" class="button">Primary Button</a>
-            <a href="#" class="link">Standard Link</a>
-            <a href="#" class="link" style="color: purple;">Visited Link</a>
+            <ul>
+                <li><a href="#" class="button">Primary Button</a></li>
+                <li><a href="#" class="link">Standard Link</a></li>
+                <li><a href="#" class="link" style="color: purple;">Visited Link</a></li>
+            </ul>
         </section>
     </div>
 </body>
